@@ -1,0 +1,514 @@
+/* Estilos generales */
+
+:root {
+    --text-color: rgb(93, 95, 121);
+    --text-color-on-dark: rgb(255, 255, 255);
+    --contrast-color-1: rgb(245, 157, 35);
+    --contrast-color-2: rgb(240, 93, 80);
+    --dark-color: rgb(0,0,0); 
+    --bg-color: rgb(227, 228, 230);
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1, h2 {   
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-color);
+    line-height: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+}
+
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 767.89px) {
+
+}
+
+h2 {
+    margin-bottom: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--contrast-color-1);
+    transition: all .15s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+main {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media screen and (max-width: 767.89px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+.arrow-right {
+    margin-left: .3rem;
+}
+
+.plus-left {
+    margin-right: .3rem;
+}
+
+.center {
+    text-align: center;
+}
+
+a.center {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 
+
+Menu
+color: var(--text-color);
+hover
+color: var(--contrast-color-1);
+
+Pie de página
+color: var(--text-color-on-dark);
+:hover
+color: var(--contrast-color-1);
+bottom
+background-color: var(--contrast-color-2);
+color: var(--text-color-on-dark);
+
+Enlaces
+color: var(--contrast-color-1);
+:hover
+color: var(--text-color);
+
+Enlaces Referentes cientificas en Página principal
+color: var(--text-color);
+:hover
+color: var(--contrast-color-1);
+
+menu página referentes
+color: var(--contrast-color-1);
+:hover
+color: var(--text-color);
+
+*/
+
+
+/**************************
+Navegación, Header y Footer 
+***************************/
+
+/* Header */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header a {
+    color: var(--text-color);
+}
+
+/* Logo */
+
+.logo span {
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    position: relative;
+    left: 3px;
+    top: -1px;
+}
+
+/* Navegación */
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    margin-top: 0;
+}
+
+header nav {
+    align-self: flex-end;
+}
+
+nav ul li {
+    padding-right: 2rem;
+    padding-bottom: .5rem;
+}
+
+header nav ul li:last-child {
+    padding-right: 0
+}
+
+header nav ul li a {
+    font-weight: 700;
+}
+
+header nav ul li a:hover {
+    color: var(--contrast-color-1);
+}
+
+footer nav ul {
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+/* Footer */
+
+footer {
+    padding: 4rem 0;
+    background-color: var(--dark-color);
+    color: var(--text-color-on-dark);
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+footer a {
+    color: var(--text-color-on-dark);
+}
+
+footer a:hover {
+    color: var(--contrast-color-1);
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.logo-footer img {
+    height: 60px;
+}
+
+.copyright {
+    font-size: 1.1rem;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset legend {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+input[type="email"] {
+    border: none;
+    border-bottom: 1px solid var(--text-color-on-dark);
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 45%;
+}
+
+input[type="email"]:focus {
+    outline: none;
+}
+
+button[type=submit] {
+    text-transform: uppercase;
+    background-color: var(--contrast-color-2);
+    color: var(--text-color-on-dark);
+    padding: 8px 10px;
+    border: none;
+    margin: 2rem 0 1rem;
+    transition: all .15s ease;
+}
+
+button[type=submit]:hover {
+    
+}
+
+/*************************************
+Navegación, Header y Footer Responsive
+**************************************/
+
+@media screen and (max-width: 991px) {
+    header .container {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header nav {
+        align-self: center;
+        padding-top: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 767.89px) {
+    input[type="email"] { 
+        width: 100%;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer nav ul li {
+        padding-right: 0;
+    }
+}
+
+/***************
+Página de inicio
+****************/
+
+.c-intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 5rem;
+}
+
+.c-intro .icon {
+    background-color: var(--contrast-color-2);
+}
+
+.c-intro .text {
+    background-color: var(--contrast-color-1);
+    color: var(--dark-color);
+    padding: 5rem 2rem 5rem 4rem;
+}
+
+.c-intro .icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.c-intro .text h1 {
+    text-align: left;
+}
+
+.c-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.c-links > div {
+    flex-basis: calc(25% - 15px);
+}
+
+.c-content .center {
+    position: relative;
+    top: -1.5rem;
+    font-size: 1.4rem;
+}
+
+.c-links a .l-area {
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.c-links a:hover .l-area {
+    color: var(--contrast-color-1);
+}
+
+.c-links a .l-name {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/**************************
+Página de inicio Responsive
+***************************/
+
+@media screen and (max-width: 991px) {
+    .c-intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .c-links {
+        flex-wrap: wrap;
+    }
+
+    .c-links > div {
+        flex-basis: calc(50% - 20px);
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 767.89px) {
+    .c-links > div {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+/*****************************
+Página Referentes científicas
+******************************/
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.submenu ul {
+    flex-direction: column;
+}
+
+.submenu ul li a{
+    font-weight: 700;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.col-first {
+    flex-basis: 25%;
+}
+
+.col-first .l-order {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--contrast-color-2);
+    line-height: 1.2;
+}
+
+.col-first .l-area, .col-first .l-date{
+    font-size: 1.4rem;
+}
+
+.col-first .l-name {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.col-img {
+    flex-basis: 25%;
+}
+
+.col-last {
+    flex-basis: 50%;
+    padding-left: 2rem;
+}
+
+/****************************************
+Página Referentes científicas Responsive
+*****************************************/
+
+@media screen and (max-width: 991px) {
+    .d-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .submenu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 767.89px) {
+    .d-flex {
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    .d-flex > div {
+        flex-basis: 100%;
+    }
+
+    .col-img {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .col-last {
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+/**************************
+Página  Responsive
+***************************/
+
+@media screen and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767.89px) {
+
+}
