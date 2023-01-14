@@ -46,10 +46,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 767.89px) {
-
-}
-
 h2 {
     margin-bottom: 1.4rem;
 }
@@ -106,38 +102,9 @@ a.center {
     margin: 0 auto;
 }
 
-/* 
-
-Menu
-color: var(--text-color);
-hover
-color: var(--contrast-color-1);
-
-Pie de página
-color: var(--text-color-on-dark);
-:hover
-color: var(--contrast-color-1);
-bottom
-background-color: var(--contrast-color-2);
-color: var(--text-color-on-dark);
-
-Enlaces
-color: var(--contrast-color-1);
-:hover
-color: var(--text-color);
-
-Enlaces Referentes cientificas en Página principal
-color: var(--text-color);
-:hover
-color: var(--contrast-color-1);
-
-menu página referentes
-color: var(--contrast-color-1);
-:hover
-color: var(--text-color);
-
-*/
-
+p {
+    margin-bottom: 2rem;
+}
 
 /**************************
 Navegación, Header y Footer 
@@ -329,7 +296,7 @@ Página de inicio
 .c-intro .text {
     background-color: var(--contrast-color-1);
     color: var(--dark-color);
-    padding: 5rem 2rem 5rem 4rem;
+    padding: 5rem 2rem 3rem 4rem;
 }
 
 .c-intro .icon img {
@@ -360,6 +327,7 @@ Página de inicio
 .c-links a .l-area {
     color: var(--text-color);
     font-size: 1.4rem;
+    margin-bottom: 0;
 }
 
 .c-links a:hover .l-area {
@@ -414,7 +382,7 @@ Página Referentes científicas
     flex-direction: column;
 }
 
-.submenu ul li a{
+.submenu ul li a {
     font-weight: 700;
 }
 
@@ -426,6 +394,10 @@ Página Referentes científicas
 
 .col-first {
     flex-basis: 25%;
+}
+
+.col-first > p, .col-last > p  {
+    margin-bottom: 0;
 }
 
 .col-first .l-order {
@@ -496,19 +468,88 @@ Página Referentes científicas Responsive
     }
 }
 
+/********************
+Página 11 de Febrero
+*********************/
 
-
-
-
-
-/**************************
-Página  Responsive
-***************************/
-
-@media screen and (max-width: 991px) {
-    
+h1 .subtitle {
+    display: block;
+    margin: 1.5rem 0 3rem;
+    font-size: 2.2rem;
 }
 
-@media screen and (max-width: 767.89px) {
+.c-quote {
+    background-color: var(--bg-color);
+    margin: 4rem;
+    padding: 2rem;
+}
 
+.c-quote blockquote {
+    font-size: 1.8rem;
+}
+
+.c-quote figcaption, .c-video figcaption {
+    font-size: 1.4rem;
+}
+
+.c-quote figcaption:before {
+    content: "";
+    height: .5rem;
+    background-color: var(--contrast-color-2);
+    width: 2.5rem;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.c-video {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 560 / 315;
+}
+
+/******************************
+Página 11 de Febrero Responsive
+*******************************/
+
+@media screen and (max-width: 991px) {
+    .c-quote {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .c-video {
+        width: 100%;
+    }
+}
+
+/******************
+Página Iniciativas
+*******************/
+
+dl dt {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+dl dt:before {
+    content: "";
+    height: 1.5rem;
+    background-color: var(--contrast-color-2);
+    width: 1.5rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+dl dd {
+    margin-bottom: 3rem;
+    padding-left: 2.5rem;
+}
+
+dl dd p {
+    margin-bottom: 0;
 }
